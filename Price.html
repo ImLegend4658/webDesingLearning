@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <title>What's price AFTER Discount..</title>
+        <link rel="stylesheet" href="mystyle.css">
+
+</head>
+<body>
+   <h5 id="head">Welcome to the price after discount website...</h5>
+    <p id="color">
+   هذا الموقع مخصص المعرفة اي سعر بعد التخفيض 
+    <br>
+    مثال
+    <br>
+ %سعر الجوال 750 دولار مع التخفيض 70 
+        <br>  
+   بعد التخفيض يصبح 255 دولار
+       <br>
+        ملاحظة: الطريقة هذي تنفع مع اي عملات.
+    </p>
+     <form name ="formcalc"> 
+    
+    <p>
+       <b>ضع سعر الأصلي</b>  
+         <br>
+         <br>
+       <input type="text" name="txt1">
+  </p>
+      
+    <p>
+        <b>ضع التخفيض</b>
+         <br>
+         <br>
+       <input type="text" name="txt2">
+        <br>
+        <br>
+            <input type="button" value="Calucate" onClick="Value()">
+
+           <p>
+        <b>النتيجة: سعر بعد تخفيض</b>
+         <br>
+         <br>
+       <input type="test" name="txtss">
+    </p>     
+ 
+   </form>
+    <script>
+        function Value(){
+    var dis, x, y;
+    var afterdisc;
+    var FinalPrice;
+    x= Number(document.formcalc.txt1.value);
+   y= Number(document.formcalc.txt2.value);
+   dis = y /100;
+    afterdisc = x * dis;
+    
+    FinalPrice = x - afterdisc;
+   document.formcalc.txtss.value=FinalPrice;
+         }
+    
+    </script>
+</body>
+</html>
